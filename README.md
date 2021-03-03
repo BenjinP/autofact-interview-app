@@ -1,13 +1,14 @@
 
 # Instrucciones para levantar el proyecto
 
-El proyecto esta hecho con Laravel 7. Para levantar el proyecto, desde la carpeta raíz del proyecto ejecutar por la consola lo siguiente: 
+El proyecto esta hecho con Laravel 7. Las instrucciones están pensadas para un ambiente Linux. 
 
+Luego de haber clonado el proyecto desde GitHub, es necesario que nos ubiquemos en la carpeta raíz del proyecto en Laravel. 
 
+Para instalar las dependencias del proyecto:
 ```bash
 composer update
 ```
-
 ```bash
 npm install
 ```
@@ -20,7 +21,12 @@ Luego, se ejecuta lo siguiente para generar la llave de aplicación:
 php artisan key:generate
 ```
 
-Para la base de datos, es necesario cambiar la configuración en el archivo .env. En este caso, se usó SQLite, por lo es necesario reemplazar por lo siguiente: 
+Para la base de datos, es necesario crear un archivo .sqlite:
+```bash
+touch database/database.sqlite
+```
+
+Y luego cambiar la configuración en el archivo .env. En este caso, se usó SQLite, por lo es necesario reemplazar por lo siguiente: 
 ```bash
 DB_CONNECTION=sqlite
 DB_DATABASE=/absolute/path/to/db/database.sqlite
